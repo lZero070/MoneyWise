@@ -1,18 +1,30 @@
 body {
-    background-color: #90EE90; /* Light Green Background */
+    background-color: #d2e9d2; /* Light Green Background */
     font-family: sans-serif;
 }
 
 header {
-    background-color: #66CDAA; /* Medium Aqua Marine */
+    background-color: #9eeed3; /* Medium Aqua Marine */
     padding: 1rem;
     text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 25px; 
+    padding: 1rem 0;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los elementos en el navbar */
+    flex-wrap: wrap; /* Permite que los botones se muevan a la siguiente línea si no caben */
+    gap: 25px; /* Espacio entre los botones */
+    padding: 1rem 0;
     margin: 0;
+    
 }
 
 nav li {
@@ -22,10 +34,33 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 0.5rem 0.5rem;
-    border: 1px solid white;
+    border: 1px solid rgb(15, 15, 15);
     border-radius: 5px;
+    font-weight: bold; 
+    font-size: 16px;
+
+}
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* Color del texto */
+    padding: 0.5rem 0.5rem;
+    border: 1px solid rgb(15, 15, 15); /* Borde del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; 
+    font-size: 16px;
+    min-width: 150px;
+    text-align: center;
+    background-color: white; /* Fondo blanco */
+}
+
+nav ul li a:hover {
+    background-color: #e0e0e0; /*cambio de color al pasar el mouse en el botor*/
 }
 
 main {
@@ -37,27 +72,36 @@ main {
     margin-bottom: 2rem;
 }
 
-.profile-container {
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
     background-color: white;
-    padding: 2rem;
     border-radius: 10px;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.profile-image {
-    text-align: center;
-}
-
-.profile-image img {
-    border-radius: 50%;
-    max-width: 150px;
-    max-height: 150px;
-}
-
-.profile-info {
     padding: 1rem;
+    margin: 1rem;
     text-align: center;
+    width: 20%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.card h3 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.card p {
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
 }
 
 .footer {
